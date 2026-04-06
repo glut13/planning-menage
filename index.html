@@ -20,9 +20,9 @@
     --muted: #7b82a0;
     --radius: 16px;
   }
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -30,7 +30,7 @@
     min-height: 100vh;
     padding-bottom: 40px;
   }
-
+ 
   header {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -39,16 +39,16 @@
     top: 0;
     z-index: 100;
   }
-
+ 
   .header-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
   }
-
+ 
   .logo { display: flex; align-items: center; gap: 10px; }
-
+ 
   .logo-icon {
     width: 36px; height: 36px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -56,10 +56,10 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 18px;
   }
-
+ 
   .logo-text { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.2; }
   .logo-sub { font-size: 11px; color: var(--muted); font-weight: 400; }
-
+ 
   .live-badge {
     display: flex; align-items: center; gap: 6px;
     background: rgba(110, 231, 183, 0.12);
@@ -68,20 +68,20 @@
     font-size: 11px; color: var(--accent); font-weight: 500;
     cursor: pointer;
   }
-
+ 
   .dot {
     width: 6px; height: 6px;
     background: var(--accent); border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
   }
-
+ 
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(0.8); }
   }
-
+ 
   .tabs { display: flex; gap: 6px; }
-
+ 
   .tab {
     flex: 1; padding: 8px;
     border: 1px solid var(--border); border-radius: 10px;
@@ -89,29 +89,28 @@
     font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
     cursor: pointer; transition: all 0.2s; text-align: center;
   }
-
+ 
   .tab.active { background: var(--accent); color: #0f1117; border-color: var(--accent); }
-
+ 
   main { padding: 20px 16px; max-width: 480px; margin: 0 auto; }
-
+ 
   .section-label {
     font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
     color: var(--muted); text-transform: uppercase;
     margin-bottom: 12px; margin-top: 24px; padding-left: 4px;
   }
-
+ 
   .today-banner {
     background: linear-gradient(135deg, rgba(110,231,183,0.15), rgba(56,189,248,0.15));
     border: 1px solid rgba(110,231,183,0.3);
     border-radius: var(--radius); padding: 16px 18px;
     margin-bottom: 20px; display: flex; align-items: center; gap: 14px;
   }
-
+ 
   .today-icon { font-size: 32px; }
   .today-info h2 { font-size: 15px; font-weight: 600; color: var(--accent); }
   .today-info p { font-size: 13px; color: var(--muted); margin-top: 2px; }
-
-  /* ===== SETUP PANEL ===== */
+ 
   .setup-panel {
     background: var(--card);
     border: 1px solid var(--border);
@@ -119,34 +118,34 @@
     padding: 20px;
     margin-bottom: 16px;
   }
-
+ 
   .setup-panel h3 {
     font-size: 14px; font-weight: 600; color: var(--text);
     margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
   }
-
+ 
   .setup-panel p {
     font-size: 12px; color: var(--muted); margin-bottom: 14px; line-height: 1.5;
   }
-
+ 
   .setup-field { margin-bottom: 12px; }
-
+ 
   .setup-field label {
     display: block; font-size: 11px; font-weight: 600;
     color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;
     margin-bottom: 6px;
   }
-
+ 
   .setup-field input {
     width: 100%; background: var(--card2); border: 1px solid var(--border);
     border-radius: 10px; padding: 10px 14px;
     color: var(--text); font-family: 'DM Mono', monospace; font-size: 12px;
     outline: none; transition: border-color 0.2s;
   }
-
+ 
   .setup-field input:focus { border-color: var(--accent); }
   .setup-field input::placeholder { color: var(--muted); }
-
+ 
   .btn-sync {
     width: 100%; padding: 12px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -155,178 +154,191 @@
     font-size: 14px; font-weight: 600; cursor: pointer;
     transition: opacity 0.2s; margin-top: 4px;
   }
-
+ 
   .btn-sync:hover { opacity: 0.85; }
   .btn-sync:disabled { opacity: 0.5; cursor: not-allowed; }
-
+ 
   .sync-status {
     font-size: 12px; color: var(--muted);
     text-align: center; margin-top: 10px; min-height: 18px;
   }
-
+ 
   .sync-status.error { color: var(--danger); }
   .sync-status.success { color: var(--accent); }
-
+ 
   .help-block {
     background: rgba(56, 189, 248, 0.07);
     border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 10px; padding: 12px 14px;
     margin-top: 14px; font-size: 12px; color: var(--muted); line-height: 1.6;
   }
-
+ 
   .help-block strong { color: var(--accent2); }
-
-  /* ===== CARDS ===== */
+ 
+  /* Badge voyageurs enrichi */
+  .guest-count-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(110, 231, 183, 0.12);
+    border: 1px solid rgba(110, 231, 183, 0.25);
+    border-radius: 6px; padding: 2px 8px;
+    font-size: 11px; font-weight: 600; color: var(--accent);
+    margin-left: 8px; vertical-align: middle;
+  }
+ 
   .card {
     background: var(--card); border: 1px solid var(--border);
     border-radius: var(--radius); margin-bottom: 12px; overflow: hidden;
     animation: fadeUp 0.4s ease both;
   }
-
+ 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
+ 
   .card-header {
     display: flex; align-items: center; justify-content: space-between;
     padding: 14px 16px 10px; border-bottom: 1px solid var(--border);
   }
-
+ 
   .platform-badge {
     display: flex; align-items: center; gap: 6px;
     font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 8px;
   }
-
+ 
   .platform-badge.airbnb {
     background: rgba(255, 90, 95, 0.15); color: #ff5a5f;
     border: 1px solid rgba(255, 90, 95, 0.3);
   }
-
+ 
   .platform-badge.booking {
     background: rgba(0, 99, 199, 0.15); color: #4d9fff;
     border: 1px solid rgba(0, 99, 199, 0.3);
   }
-
+ 
   .status-badge {
     font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px;
   }
-
+ 
   .status-badge.incoming {
     background: rgba(251, 191, 36, 0.15); color: var(--warn);
     border: 1px solid rgba(251, 191, 36, 0.3);
   }
-
+ 
   .status-badge.today {
     background: rgba(110, 231, 183, 0.15); color: var(--accent);
     border: 1px solid rgba(110, 231, 183, 0.3);
   }
-
+ 
   .status-badge.occupied {
     background: rgba(56, 189, 248, 0.15); color: var(--accent2);
     border: 1px solid rgba(56, 189, 248, 0.3);
   }
-
+ 
   .card-body { padding: 14px 16px; }
-
+ 
   .guest-name { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
-
+ 
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-
+ 
   .info-item { background: var(--card2); border-radius: 10px; padding: 10px 12px; }
-
   .info-item.full-width { grid-column: 1 / -1; }
-
+ 
   .info-label {
     font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
   }
-
+ 
   .info-value { font-size: 14px; font-weight: 500; color: var(--text); font-family: 'DM Mono', monospace; }
-
+ 
+  /* Indicateur source enrichissement */
+  .enrich-dot {
+    display: inline-block; width: 6px; height: 6px;
+    border-radius: 50%; margin-left: 5px; vertical-align: middle;
+  }
+  .enrich-dot.ok { background: var(--accent); }
+  .enrich-dot.missing { background: var(--muted); }
+ 
   .cleaning-row {
     display: flex; align-items: center; justify-content: space-between;
     padding: 10px 16px; background: rgba(251, 191, 36, 0.07);
     border-top: 1px solid var(--border);
   }
-
+ 
   .cleaning-label {
     font-size: 12px; font-weight: 600; color: var(--warn);
     display: flex; align-items: center; gap: 6px;
   }
-
+ 
   .cleaning-date { font-size: 12px; color: var(--warn); font-family: 'DM Mono', monospace; }
-
+ 
   .empty { text-align: center; padding: 50px 20px; color: var(--muted); }
   .empty-icon { font-size: 40px; margin-bottom: 12px; }
   .empty h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
   .empty p { font-size: 13px; }
-
-  /* ===== CALENDAR ===== */
+ 
   .cal-grid {
     background: var(--card); border: 1px solid var(--border);
     border-radius: var(--radius); overflow: hidden;
   }
-
+ 
   .cal-header {
     display: flex; align-items: center; justify-content: space-between;
     padding: 14px 18px; border-bottom: 1px solid var(--border);
   }
-
+ 
   .cal-title { font-size: 15px; font-weight: 600; }
-
   .cal-nav { display: flex; gap: 8px; }
-
+ 
   .cal-btn {
     width: 32px; height: 32px; border: 1px solid var(--border);
     border-radius: 8px; background: var(--card2); color: var(--muted);
     cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center;
     transition: all 0.15s;
   }
-
+ 
   .cal-btn:hover { border-color: var(--accent); color: var(--accent); }
-
+ 
   .cal-days-header {
     display: grid; grid-template-columns: repeat(7, 1fr);
     padding: 8px 12px 4px; gap: 2px;
   }
-
+ 
   .cal-day-label {
     text-align: center; font-size: 10px; font-weight: 600;
     color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;
   }
-
+ 
   .cal-days {
     display: grid; grid-template-columns: repeat(7, 1fr);
     padding: 4px 12px 14px; gap: 3px;
   }
-
+ 
   .cal-day {
     aspect-ratio: 1; border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
     font-size: 13px; font-weight: 400; color: var(--muted);
   }
-
+ 
   .cal-day.current-month { color: var(--text); }
   .cal-day.today-cell { background: var(--accent); color: #0f1117; font-weight: 700; }
   .cal-day.occupied { background: rgba(56, 189, 248, 0.2); color: var(--accent2); font-weight: 600; }
   .cal-day.checkin { background: rgba(110, 231, 183, 0.25); color: var(--accent); font-weight: 700; }
   .cal-day.checkout { background: rgba(251, 191, 36, 0.2); color: var(--warn); font-weight: 700; }
-
+ 
   .cal-legend {
     display: flex; gap: 12px; flex-wrap: wrap;
     padding: 12px 16px; border-top: 1px solid var(--border);
   }
-
+ 
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
   .legend-dot { width: 10px; height: 10px; border-radius: 3px; }
-
+ 
   .footer { text-align: center; padding: 24px 20px 0; font-size: 11px; color: var(--muted); }
-
+ 
   [data-tab-content] { display: none; }
   [data-tab-content].active { display: block; }
-
-  /* Spinner */
+ 
   .spinner {
     display: inline-block; width: 14px; height: 14px;
     border: 2px solid rgba(110, 231, 183, 0.3);
@@ -334,20 +346,12 @@
     border-radius: 50%; animation: spin 0.7s linear infinite;
     vertical-align: middle; margin-right: 6px;
   }
-
+ 
   @keyframes spin { to { transform: rotate(360deg); } }
-
-  .reset-btn {
-    background: none; border: none; color: var(--muted);
-    font-size: 11px; cursor: pointer; text-decoration: underline;
-    margin-top: 8px; display: block; width: 100%; text-align: center;
-  }
-
-  .reset-btn:hover { color: var(--danger); }
 </style>
 </head>
 <body>
-
+ 
 <header>
   <div class="header-top">
     <div class="logo">
@@ -368,37 +372,36 @@
     <button class="tab" onclick="switchTab('next', this)">⏭ Prochain</button>
   </div>
 </header>
-
+ 
 <main>
-
+ 
   <!-- LIST VIEW -->
   <div data-tab-content="list" class="active">
-
-    <!-- SETUP PANEL -->
+ 
     <div id="setup-panel" class="setup-panel">
       <h3>🔗 Connecter vos calendriers</h3>
       <p>Collez ici vos liens iCal Airbnb et/ou Booking.com pour synchroniser automatiquement vos réservations.</p>
-
+ 
       <div class="setup-field">
         <label>🔴 Lien iCal Airbnb</label>
         <input type="text" id="ical-airbnb" placeholder="https://www.airbnb.com/calendar/ical/XXXXXXX.ics" />
       </div>
-
+ 
       <div class="setup-field">
         <label>🔵 Lien iCal Booking.com</label>
         <input type="text" id="ical-booking" placeholder="https://admin.booking.com/hotel/hoteladmin/ical.html?..." />
       </div>
-
+ 
       <button class="btn-sync" id="btn-sync" onclick="saveAndSync()">⚡ Synchroniser maintenant</button>
       <div class="sync-status" id="sync-status"></div>
-
+ 
       <div class="help-block">
         <strong>Comment trouver votre lien iCal ?</strong><br>
         <strong>Airbnb :</strong> Tableau de bord → Annonce → Calendrier → Disponibilité → Connecter des calendriers → Exporter<br><br>
         <strong>Booking :</strong> Extranet → Calendrier → Synchroniser les calendriers → Exporter
       </div>
     </div>
-
+ 
     <div id="today-banner" class="today-banner" style="display:none;">
       <div class="today-icon">🧹</div>
       <div class="today-info">
@@ -406,11 +409,11 @@
         <p id="today-detail"></p>
       </div>
     </div>
-
+ 
     <div class="section-label" id="list-label" style="display:none;">Réservations à venir</div>
     <div id="cards-container"></div>
   </div>
-
+ 
   <!-- CALENDAR VIEW -->
   <div data-tab-content="calendar">
     <div class="section-label">Vue mensuelle</div>
@@ -439,20 +442,37 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- NEXT VIEW -->
   <div data-tab-content="next">
     <div class="section-label">Prochain ménage</div>
     <div id="next-container"></div>
   </div>
-
+ 
 </main>
-
+ 
 <div class="footer" id="footer-text">Connectez vos calendriers pour commencer</div>
-
+ 
 <script>
 // ================================================================
-// PROXIES CORS — essayés dans l'ordre jusqu'à ce qu'un fonctionne
+// CONFIGURATION — Remplacez par votre URL GitHub
+// ================================================================
+// Format du fichier guests.json hébergé sur GitHub :
+// {
+//   "reservations": [
+//     {
+//       "checkin": "2026-04-12",
+//       "checkout": "2026-04-15",
+//       "guest": "Martin Dupont",
+//       "guests": 3,
+//       "platform": "airbnb"
+//     }
+//   ]
+// }
+//
+// URL du fichier raw GitHub (à remplacer par votre dépôt) :
+const GUESTS_JSON_URL = 'https://raw.githubusercontent.com/glut13/planning-menage/main/guests.json';
+ 
 // ================================================================
 const PROXIES = [
   url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
@@ -460,12 +480,53 @@ const PROXIES = [
   url => `https://cors-anywhere.herokuapp.com/${url}`,
   url => `https://thingproxy.freeboard.io/fetch/${url}`,
 ];
-
+ 
 let reservations = [];
-
+let guestsData = {}; // données enrichies depuis guests.json, clé = "checkin_checkout"
+ 
 const today = new Date();
 today.setHours(0, 0, 0, 0);
-
+ 
+// ================================================================
+// CHARGEMENT DU FICHIER GUESTS.JSON (enrichissement email)
+// ================================================================
+async function loadGuestsJson() {
+  try {
+    // Ajout d'un cache-buster pour toujours avoir la dernière version
+    const url = GUESTS_JSON_URL + '?t=' + Date.now();
+    const resp = await fetch(url, { signal: AbortSignal.timeout(6000) });
+    if (!resp.ok) return;
+    const data = await resp.json();
+    // Indexer par clé "checkin|checkout" pour fusion rapide
+    guestsData = {};
+    if (data.reservations && Array.isArray(data.reservations)) {
+      for (const r of data.reservations) {
+        const key = `${r.checkin}|${r.checkout}`;
+        guestsData[key] = r;
+      }
+    }
+    console.log(`✅ guests.json chargé : ${Object.keys(guestsData).length} entrée(s)`);
+  } catch (e) {
+    // guests.json pas encore créé ou erreur réseau : pas bloquant
+    console.log('ℹ️ guests.json non disponible (normal si pas encore configuré Make)');
+  }
+}
+ 
+// Fusionne les données iCal avec les données enrichies du guests.json
+function enrichReservation(res) {
+  const key = `${res.checkin}|${res.checkout}`;
+  const extra = guestsData[key];
+  if (extra) {
+    return {
+      ...res,
+      guest: extra.guest || res.guest,
+      guests: extra.guests || res.guests,
+      enriched: true,
+    };
+  }
+  return { ...res, enriched: false };
+}
+ 
 // ================================================================
 // SAUVEGARDE LOCALE des URLs iCal
 // ================================================================
@@ -477,7 +538,7 @@ function saveUrls() {
   if (booking) localStorage.setItem('ical_booking', booking);
   else localStorage.removeItem('ical_booking');
 }
-
+ 
 function loadUrls() {
   const airbnb = localStorage.getItem('ical_airbnb') || '';
   const booking = localStorage.getItem('ical_booking') || '';
@@ -485,102 +546,73 @@ function loadUrls() {
   document.getElementById('ical-booking').value = booking;
   return { airbnb, booking };
 }
-
+ 
 // ================================================================
-// PARSING iCal (.ics)
+// PARSING iCal
 // ================================================================
 function parseIcal(text, platform) {
   const events = [];
   const blocks = text.split('BEGIN:VEVENT');
   for (let i = 1; i < blocks.length; i++) {
     const block = blocks[i];
-
-    // Summary (nom du voyageur)
     const summaryMatch = block.match(/SUMMARY[^:]*:(.+)/);
     const summary = summaryMatch ? summaryMatch[1].trim().replace(/\\,/g, ',').replace(/\\n/g, ' ') : 'Voyageur';
-
-    // Ignorer les blocages sans voyageur (ex: "Not available", "Airbnb (Not available)")
     const summaryLow = summary.toLowerCase();
-    if (summaryLow.includes('not available') || summaryLow.includes('indisponible') || summaryLow.includes('blocked') || summaryLow === 'airbnb') {
-      continue;
-    }
-
-    // Dates DTSTART / DTEND
+    if (summaryLow.includes('not available') || summaryLow.includes('indisponible') || summaryLow.includes('blocked') || summaryLow === 'airbnb') continue;
     const dtStart = block.match(/DTSTART[^:]*:(\d{8})/);
     const dtEnd = block.match(/DTEND[^:]*:(\d{8})/);
     if (!dtStart || !dtEnd) continue;
-
     const checkin = parseIcalDate(dtStart[1]);
     const checkout = parseIcalDate(dtEnd[1]);
     if (!checkin || !checkout) continue;
-
-    // Calcul nuits et voyageurs (iCal ne donne pas le nb de personnes, on met 1 par défaut)
     const nights = Math.round((checkout - checkin) / (1000 * 60 * 60 * 24));
     if (nights <= 0) continue;
-
     events.push({
       platform,
       guest: cleanGuestName(summary, platform),
       checkin: formatDateStr(checkin),
       checkout: formatDateStr(checkout),
-      guests: 1, // iCal ne fournit pas cette info
-      nights
+      guests: null, // sera enrichi par guests.json
+      nights,
+      enriched: false,
     });
   }
   return events;
 }
-
+ 
 function parseIcalDate(str) {
-  // Format YYYYMMDD
-  const y = parseInt(str.slice(0, 4));
-  const m = parseInt(str.slice(4, 6)) - 1;
-  const d = parseInt(str.slice(6, 8));
-  return new Date(y, m, d);
+  return new Date(parseInt(str.slice(0,4)), parseInt(str.slice(4,6))-1, parseInt(str.slice(6,8)));
 }
-
+ 
 function formatDateStr(date) {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
+  return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
 }
-
+ 
 function cleanGuestName(summary, platform) {
-  // Airbnb met souvent "Reservation" ou la confirmation
-  if (platform === 'airbnb') {
-    summary = summary.replace(/^Airbnb\s*[-–]\s*/i, '').replace(/\s*\(confirmed\)/i, '');
-  }
-  if (platform === 'booking') {
-    summary = summary.replace(/^Booking\.com\s*[-–]\s*/i, '');
-  }
+  if (platform === 'airbnb') summary = summary.replace(/^Airbnb\s*[-–]\s*/i, '').replace(/\s*\(confirmed\)/i, '');
+  if (platform === 'booking') summary = summary.replace(/^Booking\.com\s*[-–]\s*/i, '');
   return summary || 'Voyageur';
 }
-
+ 
 // ================================================================
-// FETCH iCal — tente plusieurs proxies en cascade
+// FETCH iCal
 // ================================================================
 async function fetchIcal(url, platform) {
   if (!url) return [];
-
-  let lastError = null;
   for (const buildProxy of PROXIES) {
     try {
-      const proxyUrl = buildProxy(url);
-      const resp = await fetch(proxyUrl, { signal: AbortSignal.timeout(8000) });
+      const resp = await fetch(buildProxy(url), { signal: AbortSignal.timeout(8000) });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const text = await resp.text();
-      // Vérifier que c'est bien un iCal valide
       if (!text.includes('BEGIN:VCALENDAR')) throw new Error('Pas un iCal valide');
       return parseIcal(text, platform);
     } catch (e) {
       console.warn(`Proxy échoué pour ${platform}:`, e.message);
-      lastError = e;
-      // Continuer avec le proxy suivant
     }
   }
-  throw lastError;
+  throw new Error('Tous les proxies ont échoué');
 }
-
+ 
 // ================================================================
 // SYNC PRINCIPALE
 // ================================================================
@@ -588,79 +620,86 @@ async function saveAndSync() {
   saveUrls();
   await syncAll();
 }
-
+ 
 async function syncAll() {
   const { airbnb, booking } = loadUrls();
   if (!airbnb && !booking) {
     setStatus('⚠️ Veuillez saisir au moins un lien iCal.', 'error');
     return;
   }
-
+ 
   const btn = document.getElementById('btn-sync');
   btn.disabled = true;
-  setStatus('<span class="spinner"></span> Connexion en cours (tentative de plusieurs serveurs)…', '');
-
+  setStatus('<span class="spinner"></span> Connexion en cours…', '');
+ 
   try {
-    const results = await Promise.allSettled([
+    // Chargement en parallèle : iCal + guests.json
+    const [icalAirbnb, icalBooking] = await Promise.allSettled([
       fetchIcal(airbnb, 'airbnb'),
-      fetchIcal(booking, 'booking')
+      fetchIcal(booking, 'booking'),
     ]);
-
+    await loadGuestsJson();
+ 
     const allEvents = [];
     const errors = [];
-
+ 
     if (airbnb) {
-      if (results[0].status === 'fulfilled') allEvents.push(...results[0].value);
+      if (icalAirbnb.status === 'fulfilled') allEvents.push(...icalAirbnb.value);
       else errors.push('Airbnb');
     }
     if (booking) {
-      if (results[1].status === 'fulfilled') allEvents.push(...results[1].value);
+      if (icalBooking.status === 'fulfilled') allEvents.push(...icalBooking.value);
       else errors.push('Booking');
     }
-
-    // Dédoublonnage par checkin+checkout+plateforme
+ 
+    // Dédoublonnage + enrichissement
     const seen = new Set();
-    reservations = allEvents.filter(r => {
-      const key = `${r.platform}-${r.checkin}-${r.checkout}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    }).sort((a, b) => a.checkin.localeCompare(b.checkin));
-
+    reservations = allEvents
+      .filter(r => {
+        const key = `${r.platform}-${r.checkin}-${r.checkout}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      })
+      .map(r => enrichReservation(r))
+      .sort((a, b) => a.checkin.localeCompare(b.checkin));
+ 
     const now = new Date();
-    const hhmm = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-    document.getElementById('last-sync-label').textContent = `Sync ${hhmm}`;
-
+    document.getElementById('last-sync-label').textContent = `Sync ${now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`;
+ 
+    const enrichedCount = reservations.filter(r => r.enriched).length;
+    const upcomingCount = reservations.filter(r => parseDate(r.checkout) >= today).length;
+ 
     if (errors.length > 0) {
-      setStatus(`⚠️ Erreur sur : ${errors.join(', ')}. Vérifiez le lien.`, 'error');
+      setStatus(`⚠️ Erreur sur : ${errors.join(', ')}`, 'error');
     } else {
-      const n = reservations.filter(r => parseDate(r.checkout) >= today).length;
-      setStatus(`✅ ${n} réservation${n > 1 ? 's' : ''} chargée${n > 1 ? 's' : ''}`, 'success');
+      let msg = `✅ ${upcomingCount} réservation${upcomingCount > 1 ? 's' : ''} chargée${upcomingCount > 1 ? 's' : ''}`;
+      if (enrichedCount > 0) msg += ` · ${enrichedCount} enrichie${enrichedCount > 1 ? 's' : ''} ✉️`;
+      setStatus(msg, 'success');
     }
-
-    // Masquer/afficher setup panel
+ 
     if (reservations.length > 0) {
       document.getElementById('setup-panel').style.display = 'none';
       document.getElementById('list-label').style.display = 'block';
     }
-
+ 
     renderCards();
     renderNext();
     renderCalendar();
-
+ 
   } catch (e) {
     setStatus('❌ Erreur de connexion. Réessayez.', 'error');
   } finally {
     btn.disabled = false;
   }
 }
-
+ 
 function setStatus(msg, type) {
   const el = document.getElementById('sync-status');
   el.innerHTML = msg;
   el.className = 'sync-status ' + type;
 }
-
+ 
 // ================================================================
 // UTILITAIRES DATE
 // ================================================================
@@ -668,15 +707,15 @@ function parseDate(str) {
   const [y, m, d] = str.split('-').map(Number);
   return new Date(y, m - 1, d);
 }
-
+ 
 function formatDate(str) {
   return parseDate(str).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
-
+ 
 function formatShort(str) {
   return parseDate(str).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
 }
-
+ 
 function getStatus(res) {
   const ci = parseDate(res.checkin);
   const co = parseDate(res.checkout);
@@ -686,42 +725,32 @@ function getStatus(res) {
   if (today < ci) return 'incoming';
   return 'past';
 }
-
+ 
 function getDaysUntil(str) {
   const diff = Math.round((parseDate(str) - today) / (1000 * 60 * 60 * 24));
   if (diff === 0) return "Aujourd'hui";
   if (diff === 1) return 'Demain';
   return `Dans ${diff} jours`;
 }
-
+ 
 // ================================================================
 // RENDU LISTE
 // ================================================================
 function renderCards() {
   const container = document.getElementById('cards-container');
-
-  if (reservations.length === 0) {
-    const hasUrls = localStorage.getItem('ical_airbnb') || localStorage.getItem('ical_booking');
-    if (!hasUrls) {
-      container.innerHTML = '';
-      return;
-    }
-    container.innerHTML = `<div class="empty"><div class="empty-icon">🌴</div><h3>Aucune réservation à venir</h3><p>Profitez du calme !</p></div>`;
-    return;
-  }
-
+ 
   const upcoming = reservations.filter(r => parseDate(r.checkout) >= today);
-
+ 
   // Bannière aujourd'hui
   const todayBanner = document.getElementById('today-banner');
   const todayCheckouts = upcoming.filter(r => parseDate(r.checkout).getTime() === today.getTime());
   const todayCheckins = upcoming.filter(r => parseDate(r.checkin).getTime() === today.getTime());
-
+ 
   if (todayCheckouts.length > 0 || todayCheckins.length > 0) {
     todayBanner.style.display = 'flex';
     if (todayCheckouts.length > 0) {
       document.getElementById('today-msg').textContent = '🧹 Ménage à faire !';
-      document.getElementById('today-detail').textContent = `Départ de ${todayCheckouts[0].guest} — remise en ordre nécessaire`;
+      document.getElementById('today-detail').textContent = `Départ de ${todayCheckouts[0].guest}`;
     } else {
       document.getElementById('today-msg').textContent = "📦 Arrivée aujourd'hui";
       document.getElementById('today-detail').textContent = `${todayCheckins[0].guest} arrive — appartement prêt ?`;
@@ -729,12 +758,15 @@ function renderCards() {
   } else {
     todayBanner.style.display = 'none';
   }
-
+ 
   if (upcoming.length === 0) {
-    container.innerHTML = `<div class="empty"><div class="empty-icon">🌴</div><h3>Aucune réservation à venir</h3><p>Profitez du calme !</p></div>`;
+    const hasUrls = localStorage.getItem('ical_airbnb') || localStorage.getItem('ical_booking');
+    container.innerHTML = hasUrls
+      ? `<div class="empty"><div class="empty-icon">🌴</div><h3>Aucune réservation à venir</h3><p>Profitez du calme !</p></div>`
+      : '';
     return;
   }
-
+ 
   container.innerHTML = '';
   upcoming.forEach((res, i) => {
     const status = getStatus(res);
@@ -743,10 +775,21 @@ function renderCards() {
     else if (status === 'checkout-today') { statusLabel = '🧹 Départ aujourd\'hui'; statusClass = 'incoming'; }
     else if (status === 'occupied') { statusLabel = '🛏 En cours'; statusClass = 'occupied'; }
     else { statusLabel = getDaysUntil(res.checkin); statusClass = 'incoming'; }
-
+ 
     const platLabel = res.platform === 'airbnb' ? '🔴 Airbnb' : '🔵 Booking';
     const platClass = res.platform === 'airbnb' ? 'airbnb' : 'booking';
-
+ 
+    // Nom du voyageur + indicateur d'enrichissement
+    const guestDisplay = res.guest || 'Voyageur';
+    const enrichDot = res.enriched
+      ? `<span class="enrich-dot ok" title="Infos récupérées depuis email"></span>`
+      : `<span class="enrich-dot missing" title="En attente de l'email de confirmation"></span>`;
+ 
+    // Nombre de voyageurs
+    const guestsValue = res.guests
+      ? `${res.guests} pers.`
+      : `<span style="color:var(--muted);font-size:12px">— en attente</span>`;
+ 
     const card = document.createElement('div');
     card.className = 'card';
     card.style.animationDelay = `${i * 0.07}s`;
@@ -756,7 +799,7 @@ function renderCards() {
         <span class="status-badge ${statusClass}">${statusLabel}</span>
       </div>
       <div class="card-body">
-        <div class="guest-name">👤 ${res.guest}</div>
+        <div class="guest-name">👤 ${guestDisplay} ${enrichDot}</div>
         <div class="info-grid">
           <div class="info-item">
             <div class="info-label">✈️ Arrivée</div>
@@ -767,12 +810,12 @@ function renderCards() {
             <div class="info-value">${formatShort(res.checkout)}</div>
           </div>
           <div class="info-item">
-            <div class="info-label">🌙 Nuits</div>
-            <div class="info-value">${res.nights} nuits</div>
+            <div class="info-label">👥 Voyageurs</div>
+            <div class="info-value">${guestsValue}</div>
           </div>
           <div class="info-item">
-            <div class="info-label">📅 Ménage dans</div>
-            <div class="info-value">${getDaysUntil(res.checkout)}</div>
+            <div class="info-label">🌙 Nuits</div>
+            <div class="info-value">${res.nights} nuits</div>
           </div>
         </div>
       </div>
@@ -783,7 +826,7 @@ function renderCards() {
     container.appendChild(card);
   });
 }
-
+ 
 // ================================================================
 // RENDU PROCHAIN
 // ================================================================
@@ -792,17 +835,20 @@ function renderNext() {
   const upcoming = reservations
     .filter(r => parseDate(r.checkout) >= today)
     .sort((a, b) => parseDate(a.checkout) - parseDate(b.checkout));
-
+ 
   if (upcoming.length === 0) {
     container.innerHTML = `<div class="empty"><div class="empty-icon">🌴</div><h3>Aucun ménage prévu</h3></div>`;
     return;
   }
-
+ 
   const next = upcoming[0];
   const platClass = next.platform === 'airbnb' ? 'airbnb' : 'booking';
   const platLabel = next.platform === 'airbnb' ? '🔴 Airbnb' : '🔵 Booking';
   const daysUntil = Math.round((parseDate(next.checkout) - today) / (1000 * 60 * 60 * 24));
-
+  const guestsLine = next.guests
+    ? `${next.guests} voyageur${next.guests > 1 ? 's' : ''}`
+    : `<span style="color:var(--muted)">Nb voyageurs — en attente email</span>`;
+ 
   container.innerHTML = `
     <div class="card">
       <div class="card-header">
@@ -810,7 +856,7 @@ function renderNext() {
         <span class="status-badge incoming">${daysUntil === 0 ? "Aujourd'hui !" : daysUntil === 1 ? 'Demain' : `Dans ${daysUntil} jours`}</span>
       </div>
       <div class="card-body">
-        <div class="guest-name">👤 ${next.guest}</div>
+        <div class="guest-name">👤 ${next.guest || 'Voyageur'}</div>
         <div class="info-grid">
           <div class="info-item full-width">
             <div class="info-label">🧹 Date du ménage</div>
@@ -821,8 +867,8 @@ function renderNext() {
             <div class="info-value">${formatShort(next.checkin)}</div>
           </div>
           <div class="info-item">
-            <div class="info-label">🌙 Nuits</div>
-            <div class="info-value">${next.nights} nuits</div>
+            <div class="info-label">👥 Voyageurs</div>
+            <div class="info-value">${guestsLine}</div>
           </div>
         </div>
       </div>
@@ -832,38 +878,38 @@ function renderNext() {
       <div class="card" style="opacity:0.7">
         <div class="card-body" style="padding: 12px 16px;">
           <div style="display:flex; justify-content:space-between; align-items:center">
-            <div style="font-size:14px; font-weight:600;">👤 ${r.guest}</div>
+            <div style="font-size:14px; font-weight:600;">👤 ${r.guest || 'Voyageur'}</div>
             <div style="font-size:12px; color:var(--muted); font-family:'DM Mono',monospace">${formatShort(r.checkout)}</div>
           </div>
-          <div style="font-size:12px; color:var(--muted); margin-top:4px">🧹 Ménage · ${r.nights} nuit${r.nights > 1 ? 's' : ''}</div>
+          <div style="font-size:12px; color:var(--muted); margin-top:4px">🧹 Ménage · ${r.guests ? r.guests + ' voy.' : r.nights + ' nuits'}</div>
         </div>
       </div>`).join('')}`;
 }
-
+ 
 // ================================================================
 // CALENDRIER
 // ================================================================
 let calYear = today.getFullYear();
 let calMonth = today.getMonth();
-
+ 
 function changeMonth(dir) {
   calMonth += dir;
   if (calMonth > 11) { calMonth = 0; calYear++; }
   if (calMonth < 0) { calMonth = 11; calYear--; }
   renderCalendar();
 }
-
+ 
 function renderCalendar() {
   const months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
   document.getElementById('cal-title').textContent = `${months[calMonth]} ${calYear}`;
-
+ 
   const firstDay = new Date(calYear, calMonth, 1);
   const lastDay = new Date(calYear, calMonth + 1, 0);
   let startDow = (firstDay.getDay() + 6) % 7;
-
+ 
   const container = document.getElementById('cal-days');
   container.innerHTML = '';
-
+ 
   function getDayStatus(date) {
     for (const r of reservations) {
       const ci = parseDate(r.checkin);
@@ -874,20 +920,17 @@ function renderCalendar() {
     }
     return null;
   }
-
+ 
   for (let i = 0; i < startDow; i++) {
-    const el = document.createElement('div');
-    el.className = 'cal-day';
-    container.appendChild(el);
+    const el = document.createElement('div'); el.className = 'cal-day'; container.appendChild(el);
   }
-
+ 
   for (let d = 1; d <= lastDay.getDate(); d++) {
     const date = new Date(calYear, calMonth, d);
     const el = document.createElement('div');
     const status = getDayStatus(date);
-    const isToday = date.getTime() === today.getTime();
     el.className = 'cal-day current-month';
-    if (isToday) el.classList.add('today-cell');
+    if (date.getTime() === today.getTime()) el.classList.add('today-cell');
     else if (status === 'checkin') el.classList.add('checkin');
     else if (status === 'checkout') el.classList.add('checkout');
     else if (status === 'occupied') el.classList.add('occupied');
@@ -895,7 +938,7 @@ function renderCalendar() {
     container.appendChild(el);
   }
 }
-
+ 
 // ================================================================
 // TABS
 // ================================================================
@@ -905,14 +948,13 @@ function switchTab(name, btn) {
   document.querySelector(`[data-tab-content="${name}"]`).classList.add('active');
   btn.classList.add('active');
 }
-
+ 
 // ================================================================
-// INIT — recharge automatiquement si URLs déjà enregistrées
+// INIT
 // ================================================================
 (function init() {
   const { airbnb, booking } = loadUrls();
   renderCalendar();
-
   if (airbnb || booking) {
     document.getElementById('setup-panel').style.display = 'block';
     syncAll();
@@ -921,3 +963,4 @@ function switchTab(name, btn) {
 </script>
 </body>
 </html>
+ 
